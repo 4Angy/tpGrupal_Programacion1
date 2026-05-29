@@ -2,15 +2,13 @@ package Ejercicios.Ejercicio4;
 import java.util.Collections;
 import java.util.List;
 
-public class Maximo  <T extends Number> {
+public class Maximo  <T extends Number & Comparable<T>> {
 
-    public void max (List<T> listaMax ){
+    public T max (List<T> listaMax ) {
 
-        double conjuntoNums;
+        Collections.sort(listaMax,Collections.reverseOrder());
+        return listaMax.get(0);}
+}
 
-         Collections.sort(listaMax);
 
-        }
-
-    }
 
